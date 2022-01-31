@@ -1,4 +1,4 @@
-package main.animals;
+package animals;
 
 public final class Main {
     

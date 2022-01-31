@@ -1,4 +1,4 @@
-package main.animals;
+package animals;
 
 import java.util.*;
 import java.util.function.UnaryOperator;

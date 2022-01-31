@@ -1,4 +1,4 @@
-package main.animals;
+package animals;
 
 import java.text.MessageFormat;
 import java.time.LocalDate;

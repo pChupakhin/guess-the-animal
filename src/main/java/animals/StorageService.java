@@ -1,4 +1,4 @@
-package main.animals;
+package animals;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
@@ -25,9 +25,7 @@ public enum StorageService {
         final Properties properties = new Properties();
         try {
             properties.loadFromXML(new FileInputStream(CONFIG_FILE));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {}
         BASE_NAME = properties.getProperty("baseName", DEFAULT_NAME);
         defaultService = of(properties.getProperty("type", DEFAULT_TYPE));
     }

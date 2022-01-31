@@ -1,4 +1,4 @@
-package main.animals;
+package animals;
 
 import java.io.IOException;
 
@@ -18,9 +18,7 @@ public final class Application extends TextInterface implements Runnable {
         printConditional("greeting");
         try {
             storageService.load(knowledgeTree);
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
+        } catch(IOException e) {}
         
         if (knowledgeTree.isEmpty()) {
             println();
@@ -42,9 +40,7 @@ public final class Application extends TextInterface implements Runnable {
         
         try{
             storageService.save(knowledgeTree);
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
+        } catch(IOException e) {}
         println("farewell");
     }
     
