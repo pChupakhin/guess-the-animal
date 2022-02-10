@@ -2,6 +2,7 @@
 ## IntelliJ
 ##############################
 out/
+traget/
 .idea/
 .idea_modules/
 *.iml
@@ -17,4 +18,7 @@ out/
 *.war
 *.ear
 *.nar
+animals.json
+animals.yaml
+animals.xml
 hs_err_pid*
