@@ -1,4 +1,4 @@
-package main.java.animals;
+package animals;
 
 import java.util.Objects;
 import java.util.Arrays;

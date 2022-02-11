@@ -1,4 +1,4 @@
-package main.java.animals;
+package animals;
 
 public final class GuessingGame extends TextInterface implements Runnable {
     private final KnowledgeTree db;
