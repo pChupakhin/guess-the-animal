@@ -1,6 +1,12 @@
-package animals;
+package main.java.animals;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.LinkedList;
+import java.util.Deque;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.IntSummaryStatistics;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 

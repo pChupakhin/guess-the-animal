@@ -1,9 +1,16 @@
-package animals;
+package main.java.animals;
 
-import java.text.MessageFormat;
-import java.time.LocalDate;
+import java.util.Objects;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
 import java.time.LocalTime;
-import java.util.*;
+import java.time.LocalDate;
+import java.util.Scanner;
+import java.util.Random;
+import java.text.MessageFormat;
+import java.util.ResourceBundle;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;

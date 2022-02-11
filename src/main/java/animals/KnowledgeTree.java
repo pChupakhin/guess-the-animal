@@ -1,4 +1,4 @@
-package animals;
+package main.java.animals;
 
 public class KnowledgeTree {
     private TreeNode<String> root;

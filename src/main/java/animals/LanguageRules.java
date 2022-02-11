@@ -1,4 +1,4 @@
-package animals;
+package main.java.animals;
 
 import java.util.Map;
 import java.util.Objects;

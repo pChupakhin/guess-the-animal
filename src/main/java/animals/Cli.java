@@ -1,4 +1,4 @@
-package animals;
+package main.java.animals;
 
 /**
  * An interface for a console menu system.

@@ -1,4 +1,4 @@
-package animals;
+package main.java.animals;
 
 import java.text.MessageFormat;
 import java.util.EnumMap;
