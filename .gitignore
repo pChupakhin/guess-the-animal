@@ -18,10 +18,5 @@ traget/
 *.war
 *.ear
 *.nar
-animals.json
-animals.yaml
-animals.xml
-animals_eo.json
-animals_eo.yaml
-animals_eo.xml
+animals*.*
 hs_err_pid*
