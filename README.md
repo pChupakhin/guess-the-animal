@@ -1,5 +1,5 @@
                                                     Pre-Description:
-    If in the IDE "Run / Debug Configuration" in the "VM Option" key "-Duser.language=eo" was specified,
+If in the IDE "Run / Debug Configuration" in the "VM Option" key "-Duser.language=eo" was specified,
 then command line interface of the program will be printed in Esperanto language.
     When starting the program, the user can specify the parameter "-type" with one of the following options: "json", "xml", or "yaml".
 If the parameter is not specified, the program should select the default format(specified in "application.xml") for the file
@@ -10,7 +10,7 @@ Name of the file is specified in "application.xml" file.
               Some of these files were edited.
 
                                                       Description:
-    The computer should greet the user with random greeting or greeting based on the time of the day
+The computer should greet the user with random greeting or greeting based on the time of the day
 (or based on time of the year if it's Christmas season).
     If knowledge (Binary)tree data was saved previously then program should start interacting with user by CLI menu,
 in other case program should ask user to enter favorite animal(entered animal will be the root of knowledge tree) and
@@ -33,17 +33,17 @@ after that program should interact with user by CLI menu.
      When the computer starts the game, it will ask questions starting from the top of knowledge tree, that is, the root node.
    If current node is not a leaf than program will ask statement question, in other case - program will try to guess the animal.
    The computer must perceive these responses as positive:
-    - y, yes, yeah, yep, sure, right, affirmative, correct, indeed, you bet, exactly, you said it.
+   y, yes, yeah, yep, sure, right, affirmative, correct, indeed, you bet, exactly, you said it.
    The negative answer could be:
-    - n, no, no way, nah, nope, negative, I don't think so, yeah no.     
+   n, no, no way, nah, nope, negative, I don't think so, yeah no.     
    The letters can be in any case and there can be a period or an exclamation mark at the end of the statement.
    In case the user's answer is not clear, the program should ask(in different way each time) the user to clarify.
      If the computer makes right guess, program should print random "happy" message and end the game.  
      If the computer makes a wrong guess, it should ask the user three questions:
-     - first, what animal the user had in mind, and
-     - second, what statement can help the computer distinguish the animal it guessed (old) from the animal that the person actually thought of (new).
+     1) what animal the user had in mind, and
+     2) what statement can help the computer distinguish the animal it guessed (old) from the animal that the person actually thought of (new).
    The program should only accept statements of a certain template: "It can/has/is...".
-     - third, the program should clarify whether that fact is correct for the new animal.
+     3) the program should clarify whether that fact is correct for the new animal.
      After that, the name of the "old" animal in the tree is replaced with the new statement,
    and two new leaves are added to this node: one with the "old" animal and another with the "new" animal, after that the game ends.
      After game ending program should ask user if he/she wants to repeat the game.
