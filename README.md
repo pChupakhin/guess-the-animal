@@ -46,13 +46,12 @@ When the computer starts the game, it will ask questions starting from the top o
    In case the user's answer is not clear, the program should ask(in different way each time) the user to clarify.
      If the computer makes right guess, program should print random "happy" message and end the game.  
      If the computer makes a wrong guess, it should ask the user three questions:
-     - what animal the user had in mind, and
-     - what statement can help the computer distinguish the animal it guessed (old) from the animal that the person actually thought of (new).
-   The program should only accept statements of a certain template: "It can/has/is...".
-     - the program should clarify whether that fact is correct for the new animal.
-     After that, the name of the "old" animal in the tree is replaced with the new statement,
-   and two new leaves are added to this node: one with the "old" animal and another with the "new" animal, after that the game ends.
-     After game ending program should ask user if he/she wants to repeat the game.
+ - what animal the user had in mind, and
+ - what statement can help the computer distinguish the animal it guessed (old) from the animal that the person actually thought of (new).The program should only accept statements of a certain template: "It can/has/is...".
+ - the program should clarify whether that fact is correct for the new animal.
+After that, the name of the "old" animal in the tree is replaced with the new statement,
+ and two new leaves are added to this node: one with the "old" animal and another with the "new" animal, after that the game ends.
+After game ending program should ask user if he/she wants to repeat the game.
 
 ####        Example:
 ```
