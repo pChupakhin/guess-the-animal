@@ -1,8 +1,8 @@
 package animals;
 
 public class KnowledgeTree {
-    private TreeNode<String> root;
-    private TreeNode<String> current;
+    private TreeNode root;
+    private TreeNode current;
 
     public void reset() {
         current = root;
@@ -16,19 +16,19 @@ public class KnowledgeTree {
         return !isAnimal();
     }
 
-    public TreeNode<String> getCurrent() {
+    public TreeNode getCurrent() {
         return current;
     }
 
     public void next(final boolean direction) {
-        current = direction ? current.getRight() : current.getLeft();
+        current = direction ? current.getYes() : current.getNo();
     }
 
-    public TreeNode<String> getRoot() {
+    public TreeNode getRoot() {
         return root;
     }
 
-    public void setRoot(final TreeNode<String> root) {
+    public void setRoot(final TreeNode root) {
         this.root = root;
         this.current = root;
     }
@@ -37,31 +37,13 @@ public class KnowledgeTree {
         return root == null;
     }
 
-    public void addAnimal(final String animal, final String statement, final boolean isRight) {
+    public void addAnimal(final String animal, final String statement, final boolean isYes) {
 
-        final TreeNode<String> newAnimal = new TreeNode<>(animal);
-        final TreeNode<String> oldAnimal = new TreeNode<>(current.getData());
+        final TreeNode newAnimal = new TreeNode(animal);
+        final TreeNode oldAnimal = new TreeNode(current.getData());
         current.setData(statement);
-        current.setRight(isRight ? newAnimal : oldAnimal);
-        current.setLeft(isRight ? oldAnimal : newAnimal);
-    }
-
-    public boolean deleteAnimal(final String animal) {
-
-        final boolean isSuccessful = deleteAnimal(animal, root, null);
-
-        return isSuccessful;
-    }
-
-    private boolean deleteAnimal(final String animal, final TreeNode<String> child, final TreeNode<String> parent) {
-        if (child.isLeaf() && animal.equals(child.getData())) {
-            final TreeNode<String> source = parent.getRight() == child ? parent.getLeft() : parent.getRight();
-            parent.setData(source.getData());
-            parent.setRight(source.getRight());
-            parent.setLeft(source.getLeft());
-            return true;
-        }
-        return !child.isLeaf() && (deleteAnimal(animal, child.getRight(), child) || deleteAnimal(animal, child.getLeft(), child));
+        current.setYes(isYes ? newAnimal : oldAnimal);
+        current.setNo(isYes ? oldAnimal : newAnimal);
     }
     
 }

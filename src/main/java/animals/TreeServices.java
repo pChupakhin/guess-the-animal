@@ -37,16 +37,6 @@ public final class TreeServices extends TextInterface {
         facts.forEach(fact -> printf("tree.search.printf", fact));
     }
 
-    void delete() {
-        if (knowledgeTree.getRoot().isLeaf()) {
-            println("tree.delete.root");
-            return;
-        }
-        final String animal = ask("animal");
-        final String feedback = knowledgeTree.deleteAnimal(animal) ? "successful" : "fail";
-        println("tree.delete." + feedback, toName.apply(animal));
-    }
-
     void statistics() {
         final IntSummaryStatistics stats = getStatistics();
         println("tree.stats.title");
@@ -67,21 +57,21 @@ public final class TreeServices extends TextInterface {
         printNode(knowledgeTree.getRoot(), false, " ");
     }
 
-    private void printNode(final TreeNode<String> node, final boolean isRight, String prefix) {
+    private void printNode(final TreeNode node, final boolean isYes, String prefix) {
         if (node.isLeaf()) {
             printf("tree.print.printf",
-                    prefix, getLine(isRight),
+                    prefix, getLine(isYes),
                     node.getData());
             return;
         }
         printf("tree.print.printf", prefix,
-                getLine(isRight),
+                getLine(isYes),
                 applyRules("question", node.getData()));
         
-        prefix += isRight ? resourceBundle.getString("tree.print.vertical") : " ";
+        prefix += isYes ? resourceBundle.getString("tree.print.vertical") : " ";
         
-        printNode(node.getRight(), true, prefix);
-        printNode(node.getLeft(), false, prefix);
+        printNode(node.getYes(), true, prefix);
+        printNode(node.getNo(), false, prefix);
     }
 
     private String getLine(final boolean isBranch) {
@@ -94,17 +84,17 @@ public final class TreeServices extends TextInterface {
         return animals;
     }
 
-    private void collectAnimals(final TreeNode<String> node, final Deque<String> facts) {
+    private void collectAnimals(final TreeNode node, final Deque<String> facts) {
         if (node.isLeaf()) {
             animals.put(toName.apply(node.getData()), List.copyOf(facts));
             return;
         }
         final String statement = node.getData();
         facts.add(statement);
-        collectAnimals(node.getRight(), facts);
+        collectAnimals(node.getYes(), facts);
         facts.removeLast();
         facts.add(applyRules("negative", statement));
-        collectAnimals(node.getLeft(), facts);
+        collectAnimals(node.getNo(), facts);
         facts.removeLast();
     }
     

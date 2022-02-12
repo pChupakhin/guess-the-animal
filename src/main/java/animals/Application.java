@@ -20,7 +20,7 @@ public final class Application extends TextInterface implements Runnable {
             println();
             println("animal.wantLearn");
             println("animal.askFavorite");
-            knowledgeTree.setRoot(new TreeNode<>(ask("animal")));
+            knowledgeTree.setRoot(new TreeNode(ask("animal")));
         }
         println("welcome");
 
@@ -30,7 +30,6 @@ public final class Application extends TextInterface implements Runnable {
                 .add("menu.entry.search", treeServices::search)
                 .add("menu.entry.statistics", treeServices::statistics)
                 .add("menu.entry.print", treeServices::print)
-                .add("menu.entry.delete", treeServices::delete)
                 .addExit()
                 .run();
 

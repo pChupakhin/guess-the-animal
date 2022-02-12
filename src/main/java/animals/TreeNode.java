@@ -4,45 +4,45 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class TreeNode<T> {
-    private T data;
-    private TreeNode<T> right;
-    private TreeNode<T> left;
+public class TreeNode {
+    private String data;
+    private TreeNode yes;
+    private TreeNode no;
 
     TreeNode() {
     }
 
-    public TreeNode(final T data) {
+    public TreeNode(final String data) {
         this.data = data;
     }
 
     @JsonIgnore
     public boolean isLeaf() {
-        return left == null && right == null;
+        return no == null && yes == null;
     }
 
-    public T getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(final T data) {
+    public void setData(final String data) {
         this.data = data;
     }
 
-    public TreeNode<T> getRight() {
-        return right;
+    public TreeNode getYes() {
+        return yes;
     }
 
-    public void setRight(final TreeNode<T> right) {
-        this.right = right;
+    public void setYes(final TreeNode yes) {
+        this.yes = yes;
     }
 
-    public TreeNode<T> getLeft() {
-        return left;
+    public TreeNode getNo() {
+        return no;
     }
 
-    public void setLeft(final TreeNode<T> left) {
-        this.left = left;
+    public void setNo(final TreeNode no) {
+        this.no = no;
     }
     
 }
