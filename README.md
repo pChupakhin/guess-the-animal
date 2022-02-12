@@ -1,4 +1,4 @@
-                                                    #Pre-Description:
+                                                   # Pre-Description:
 If in the IDE "Run / Debug Configuration" in the "VM Option" key "-Duser.language=eo" was specified,
 then command line interface of the program will be printed in Esperanto language.
     When starting the program, the user can specify the parameter "-type" with one of the following options: "json", "xml", or "yaml".
@@ -9,7 +9,7 @@ Name of the file is specified in "application.xml" file.
         Note: files in "resources" folder were recommended to download in description of the last stage of this project at hyperskill.org.
               Some of these files were edited.
 
-                                                      #Description:
+                                                      # Description:
 The computer should greet the user with random greeting or greeting based on the time of the day
 (or based on time of the year if it's Christmas season).
     If knowledge (Binary)tree data was saved previously then program should start interacting with user by CLI menu,
@@ -25,7 +25,7 @@ after that program should interact with user by CLI menu.
 0. Exit
 
 
-                                                ##Description of each menu item:
+                                                ##  Description of each menu item:
 1) Play the guessing game:
      Program should print this message:
        "Let’s play a game!
@@ -49,9 +49,9 @@ after that program should interact with user by CLI menu.
    and two new leaves are added to this node: one with the "old" animal and another with the "new" animal, after that the game ends.
      After game ending program should ask user if he/she wants to repeat the game.
 
-   ####Example:
+   #### Example:
 
-  Let's look at an example so that you can better visualize the game process.
+  `Let's look at an example so that you can better visualize the game process.
   When the program starts and prompts the user for their favorite animal, the user replies that it is a cat.
 ```
      |
@@ -75,17 +75,20 @@ after that program should interact with user by CLI menu.
 ```
   In the new tree, the root element is the statement, and the node has two children: the names of the animals.
   So, if the program does not guess the animal correctly, two items are added to the knowledge tree:
-  the name of the new animal and a fact that distinguishes one animal from the other.
+  the name of the new animal and a fact that distinguishes one animal from the other.`
+
 ------------------------------------------------------------------------------------------------------------------------
 2) List of all animals:
    The program should traverse the knowledge tree and collect all the animal names into a list.
    The list of animals should be sorted in ascending order without articles.
+
 ------------------------------------------------------------------------------------------------------------------------
 3) Search for an animal:
    The search has to accept the animal's name with or without the article.
    If the animal is found, the program should print all the facts it knows about this animal.
    If the animal is not found, this information will be printed for the user:
    "No facts about the <animal>."
+
 ------------------------------------------------------------------------------------------------------------------------
 4) Calculate statistics:
    The program should print:
@@ -93,9 +96,11 @@ after that program should interact with user by CLI menu.
     - the size of the knowledge tree (number of nodes)
     - the number of animals, the number of facts
     - and the maximum and minimum depth of the tree which correspond to the minimum and maximum number of questions the program gets before it wins or gives up.
+
 ------------------------------------------------------------------------------------------------------------------------
 5) Print the Knowledge Tree:
    The program should print the Knowledge Tree.
+
 ------------------------------------------------------------------------------------------------------------------------
 0) Exit:
    The knowledge tree data should be serialized and program should be terminated.
