@@ -52,12 +52,12 @@ after that program should interact with user by CLI menu.
 
   Let's look at an example so that you can better visualize the game process.
   When the program starts and prompts the user for their favorite animal, the user replies that it is a cat.
-
+```
      |
   ( Cat )
     | |
   null null
-
+```
   We get a binary tree where the root node is unique and has no children.
 
   Suppose that then the user has thought of a dog. To the computer's question "Is it a cat?", they answer negatively.
