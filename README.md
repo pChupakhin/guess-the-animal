@@ -36,7 +36,7 @@ After that program offers the user a CLI menu. The menu has to include at least 
        Press enter when you’re ready."
 ```
 When the computer starts the game, it will ask questions starting from the top of knowledge tree, that is, the root node.\
-If current node is not a leaf than program will ask statement question, in other case - program will try to guess the animal.__
+If current node is not a leaf than program will ask statement question, in other case - program will try to guess the animal.\
 The computer must perceive these responses as positive:\
 `y, yes, yeah, yep, sure, right, affirmative, correct, indeed, you bet, exactly, you said it.`\
 The negative answer could be:\
