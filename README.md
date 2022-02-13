@@ -37,17 +37,17 @@ After that program offers the user a CLI menu. The menu has to include at least 
 ```
 When the computer starts the game, it will ask questions starting from the top of knowledge tree, that is, the root node.\
 If current node is not a leaf than program will ask statement question, in other case - program will try to guess the animal
-The computer must perceive these responses as positive:__
-- y, yes, yeah, yep, sure, right, affirmative, correct, indeed, you bet, exactly, you said it.
-The negative answer could be:__
-- n, no, no way, nah, nope, negative, I don't think so, yeah no.     
+The computer must perceive these responses as positive:\
+y, yes, yeah, yep, sure, right, affirmative, correct, indeed, you bet, exactly, you said it.\
+The negative answer could be:\
+n, no, no way, nah, nope, negative, I don't think so, yeah no.\     
 The letters can be in any case and there can be a period or an exclamation mark at the end of the statement.\
 In case the user's answer is not clear, the program should ask(in different way each time) the user to clarify.\
 If the computer makes right guess, program should print random "happy" message and end the game.\  
-If the computer makes a wrong guess, it should ask the user three questions:
-- what animal the user had in mind, and
-- what statement can help the computer distinguish the animal it guessed (old) from the animal that the person actually thought of (new).The program should only accept statements of a certain template: "It can/has/is...".
-- the program should clarify whether that fact is correct for the new animal.\
+If the computer makes a wrong guess, it should ask the user three questions:\
+1.What animal the user had in mind
+2.What statement can help the computer distinguish the animal it guessed (old) from the animal that the person actually thought of (new).The program should only accept statements of a certain template: "It can/has/is...".
+3.Clarifying question: whether that statement is correct for the new animal.\
 After that, the name of the "old" animal in the tree is replaced with the new statement,
 and two new leaves are added to this node: one with the "old" animal and another with the "new" animal, after that the game ends.\
 After game ending program should ask user if he/she wants to repeat the game.
@@ -81,19 +81,19 @@ After game ending program should ask user if he/she wants to repeat the game.
   the name of the new animal and a fact that distinguishes one animal from the other.
 ```
 ------------------------------------------------------------------------------------------------------------------------
-2) ###List of all animals:
+###2) List of all animals:
    The program should traverse the knowledge tree and collect all the animal names into a list.\
    The list of animals should be sorted in ascending order without articles.
 
 ------------------------------------------------------------------------------------------------------------------------
-3) ###Search for an animal:
+###3) Search for an animal:
    The search has to accept the animal's name with or without the article.\
    If the animal is found, the program should print all the facts it knows about this animal.\
    If the animal is not found, this information will be printed for the user:\
    "No facts about the <animal>."
 
 ------------------------------------------------------------------------------------------------------------------------
-4) ###Calculate statistics:
+###4) Calculate statistics:
    The program should print:
     - the root node
     - the size of the knowledge tree (number of nodes)
@@ -101,9 +101,9 @@ After game ending program should ask user if he/she wants to repeat the game.
     - and the maximum and minimum depth of the tree which correspond to the minimum and maximum number of questions the program gets before it wins or gives up.
 
 ------------------------------------------------------------------------------------------------------------------------
-5) ###Print the Knowledge Tree:
+###5) Print the Knowledge Tree:
    The program should print the Knowledge Tree.
 
 ------------------------------------------------------------------------------------------------------------------------
-0) ###Exit:
+###0) Exit:
    The knowledge tree data should be serialized and program should be terminated.
