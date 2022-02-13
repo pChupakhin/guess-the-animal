@@ -1,7 +1,7 @@
 package animals;
 
 /**
- * An interface for a console menu system.
+ * An interface for a command line menu system.
  */
 public interface Cli extends Runnable {
 
@@ -94,4 +94,5 @@ public interface Cli extends Runnable {
             return value;
         }
     }
+    
 }

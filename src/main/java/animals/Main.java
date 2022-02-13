@@ -10,4 +10,5 @@ public final class Main {
         
         new Application(storageService).run();
     }
+    
 }

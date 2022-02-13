@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 import static java.util.stream.Collectors.toUnmodifiableMap;
 
 public abstract class LanguageRules {
+    
     protected static final Map<String, Pattern> patterns;
     private static final ResourceBundle rules;
     

@@ -1,6 +1,8 @@
 package animals;
 
-public final class Application extends TextInterface implements Runnable {
+public final class
+Application extends TextInterface implements Runnable {
+    
     private final KnowledgeTree knowledgeTree;
     private final StorageService storageService;
     private final TreeServices treeServices;

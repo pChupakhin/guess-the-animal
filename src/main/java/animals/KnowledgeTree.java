@@ -1,6 +1,7 @@
 package animals;
 
 public class KnowledgeTree {
+    
     private TreeNode root;
     private TreeNode current;
 
