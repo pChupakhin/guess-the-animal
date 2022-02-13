@@ -19,12 +19,12 @@ after that program should interact with user by CLI menu.
 Note: Every time user enters animal(with or without the article), correct article will replace entered article or added.
 ```
 After that program offers the user a CLI menu. The menu has to include at least these items:
-1) Play the guessing game
-2) List of all animals
-3) Search for an animal
-4) Calculate statistics
-5) Print the Knowledge Tree
-0) Exit
+ - Play the guessing game
+ - List of all animals
+ - Search for an animal
+ - Calculate statistics
+ - Print the Knowledge Tree
+ - Exit
 
 
 ## Description of each menu item:
