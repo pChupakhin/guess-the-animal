@@ -4,7 +4,7 @@ then command line interface of the program will be printed in Esperanto language
 When starting the program, the user can specify the parameter "-type" with one of the following options: "json", "xml", or "yaml".\
 If the parameter is not specified, the program should select the default format(specified in "application.xml") for the file
 that is needed to save knowledge tree data when program is finished by user and to load it with start of a program(if it was previously saved in above-mentioned file).\
-Name of the file is specified in "application.xml" file.
+Name of the file is specified in "application.xml".
 ```
 Note: files in "resources" folder were recommended to download in description of the last stage of this project at hyperskill.org.
 Some of these files were edited.
