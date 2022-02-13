@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public enum StorageService {
+    
     JSON(new JsonMapper()),
     YAML(new YAMLMapper()),
     XML(new XmlMapper());

@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LocalCli extends TextInterface implements Cli {
+    
     private final Map<String, MenuEntry> menu = new LinkedHashMap<>();
     private final Map<Property, String> properties = new EnumMap<>(Property.class);
     private final MenuEntry defaultEntry = new MenuEntry("Incorrect option",

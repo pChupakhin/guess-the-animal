@@ -5,11 +5,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TreeNode {
+    
     private String data;
     private TreeNode yes;
     private TreeNode no;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
     public TreeNode(final String data) {

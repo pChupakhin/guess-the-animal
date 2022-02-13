@@ -11,17 +11,18 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
 public final class TreeServices extends TextInterface {
+    
     private static final UnaryOperator<String> toName = animal ->
             applyRules("animalName", animal);
 
     private final KnowledgeTree knowledgeTree;
     private final Map<String, List<String>> animals = new HashMap<>();
 
-    TreeServices(final KnowledgeTree knowledgeTree) {
+    public TreeServices(final KnowledgeTree knowledgeTree) {
         this.knowledgeTree = knowledgeTree;
     }
 
-    void list() {
+    public void list() {
         println("tree.list.animals");
         getAnimals().entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
@@ -29,7 +30,7 @@ public final class TreeServices extends TextInterface {
                         printf("tree.list.printf", entry.getKey(), entry.getValue().size()));
     }
 
-    void search() {
+    public void search() {
         final String animal = ask("tree.search");
         final List<String> facts = getAnimals().getOrDefault(animal, Collections.emptyList());
         final String feedback = facts.isEmpty() ? "tree.search.noFacts" : "tree.search.facts";
@@ -37,7 +38,7 @@ public final class TreeServices extends TextInterface {
         facts.forEach(fact -> printf("tree.search.printf", fact));
     }
 
-    void statistics() {
+    public void statistics() {
         final IntSummaryStatistics stats = getStatistics();
         println("tree.stats.title");
         println("tree.stats.root", knowledgeTree.getRoot().getData());
@@ -53,7 +54,7 @@ public final class TreeServices extends TextInterface {
         return getAnimals().values().stream().collect(Collectors.summarizingInt(List::size));
     }
 
-    void print() {
+    public void print() {
         printNode(knowledgeTree.getRoot(), false, " ");
     }
 
